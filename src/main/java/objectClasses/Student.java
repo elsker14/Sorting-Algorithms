@@ -6,6 +6,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Student {
+
+    //needed for Statistics && Main sources
+
     //Fields -----------------------------------------------------------------------------------------------------------
     private String nume;
     private String prenume;
@@ -85,29 +88,34 @@ public class Student {
     //toString
     @Override
     public String toString() {
-        return  ("nume='" + nume +
-                ", prenume='" + prenume +
-                ", grupa='" + grupa +
-                ", serie='" + serie +
-                ", an=" + an +
-                ", medie=" + medie);
+        return  ("nume = '" + nume +
+                ", prenume = '" + prenume +
+                ", an = " + an +
+                ", grupa = '" + grupa +
+                ", serie = '" + serie +
+                ", medie = " + medie +
+                "\r\n");
     }
 
-    //Methods ----------------------------------------------------------------------------------------------------------
+    //Methods for Statistics -------------------------------------------------------------------------------------------
     public static List <Student> hardcodeStudents()
     {
         List <Student> hardcodedListOfStudents = new ArrayList<>();
         Random rand = new Random();
 
-        for(int i = 0; i < 1000; i++)
+        for(int i = 0; i < 100; i++)
         {
+            String group = StudentInfoRandomizer.getRandomGroup();
+            String series = StudentInfoRandomizer.getRandomSeries();
+            int year = Character.getNumericValue(group.charAt(1));
+
             hardcodedListOfStudents.add(new Student(
-                    RandomAlphaNumericString.getAlphaNumericString(5),
-                    RandomAlphaNumericString.getAlphaNumericString(5),
-                    RandomAlphaNumericString.getAlphaNumericString(3),
-                    RandomAlphaNumericString.getAlphaNumericString(1),
-                    ((int) (Math.random() * (5 - 1)) + 1),
-                    (1D + (10D - 1D) * rand.nextDouble())
+                    RandomAlphaNumericString.getAlphaNumericString(5),      //nume
+                    RandomAlphaNumericString.getAlphaNumericString(5),      //prenume
+                    group,                                                     //grupa, old way: RandomAlphaNumericString.getAlphaNumericString(3)
+                    series,                                                    //serie, old way : RandomAlphaNumericString.getAlphaNumericString(1)
+                    year,                                                      //an, old way: ((int) (Math.random() * (5 - 1)) + 1)
+                    (1D + (10D - 1D) * rand.nextDouble())                      //medie
             ));
         }
 
@@ -128,7 +136,6 @@ public class Student {
 
     }
 
-
     public static Map <String, Integer> fillInSortAlgorithmStatistics()
     {
         Map<String, Integer> performanceStatiticsOfSortAlgorithms = new HashMap<>();
@@ -145,7 +152,25 @@ public class Student {
         return performanceStatiticsOfSortAlgorithms;
     }
 
-    //Sorting Algorithms
+    //Methods for Main -------------------------------------------------------------------------------------------------
+
+    public static void sortStudents(List <Student> tmp)
+    {
+        Collections.sort(tmp, new Comparator<Student>() {
+            @Override
+            public int compare(Student o1, Student o2)
+            {
+                return o2.getMedie().compareTo(o1.getMedie());
+            }
+        });
+    }
+
+    public static void printStudents(List <Student> tmp)
+    {
+        System.out.println(Arrays.toString(tmp.toArray()));
+    }
+
+    //Sorting Algorithms returning execution time ----------------------------------------------------------------------
     public static long collectionSort(List <Student> tmp)
     {
         long timeStarted, timeEnded;

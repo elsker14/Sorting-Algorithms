@@ -1,10 +1,13 @@
+package backendSrc;
+
 import objectClasses.SortAlgo;
 import objectClasses.Student;
 
 import java.util.*;
 
-public class MainBackend {
+public class Statistics {
 
+    //Study case regarding which Sorting Algorithm is the fastest => Collection.sort WINNER!!
     private static boolean ASC = true;
     private static boolean DESC = false;
 
@@ -16,7 +19,7 @@ public class MainBackend {
         Map<String, Integer> performanceStatiticsOfSortAlgorithms = new HashMap<>();
         performanceStatiticsOfSortAlgorithms = Student.fillInSortAlgorithmStatistics();
 
-        for (int i = 0; i < 100000; i++)
+        for (int i = 0; i < 100; i++)
         {
             SortAlgo bestSortAlgoPerIteration = new SortAlgo();
 
@@ -74,7 +77,7 @@ public class MainBackend {
 
         //Print Map ----------------------------------------------------------------------------------------------------
         //System.out.println();
-        System.out.println("Statistics regarding which Sorting Algorithm is faster: ");
+        System.out.println("backendSrc.Statistics regarding which Sorting Algorithm is faster: ");
         System.out.println();
 
         performanceStatiticsOfSortAlgorithms = Student.sortByValue(performanceStatiticsOfSortAlgorithms, DESC);

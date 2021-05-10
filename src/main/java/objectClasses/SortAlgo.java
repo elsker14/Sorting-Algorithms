@@ -2,6 +2,7 @@ package objectClasses;
 
 public class SortAlgo {
 
+    //needed for Statistics source
     private String sortingAlgoName;
     private long duration;
 

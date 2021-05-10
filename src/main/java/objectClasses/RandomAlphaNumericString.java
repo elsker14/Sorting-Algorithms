@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class RandomAlphaNumericString {
 
+    //needed for Student object class
     static String getAlphaNumericString(int n)
     {
 
