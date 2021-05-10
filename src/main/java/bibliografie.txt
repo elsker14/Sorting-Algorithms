@@ -1,0 +1,53 @@
+http://www.electronica.pub.ro/index.php/studenti/cazari
+https://etti.pub.ro/absolvire/vizualizeaza_.php
+
+https://stackoverflow.com/questions/10168066/how-to-print-out-all-the-elements-of-a-list-in-java
+https://stackoverflow.com/questions/3680637/generate-a-random-double-in-a-range/32808589
+https://stackoverflow.com/questions/4018090/sorting-listclass-by-one-of-its-variable
+https://programming.guide/java/float-vs-float.html
+https://stackoverflow.com/questions/18377477/java-calculate-how-long-sorting-an-array-takes
+
+https://www.codesdope.com/course/algorithms-analyze-your-algorithm/
+
+Sortari:
+https://stackabuse.com/sorting-algorithms-in-java/
+
+    RadixSort:
+    !!! nu merge
+        https://www.geeksforgeeks.org/radix-sort/
+    QuickSort care calculeaza minimal cost:
+        https://www.geeksforgeeks.org/minimum-cost-to-sort-an-array-such-that-swapping-x-and-y-costs-xy/
+    Quicksort:
+        https://www.geeksforgeeks.org/quick-sort/
+        https://medium.com/human-in-a-machine-world/quicksort-the-best-sorting-algorithm-6ab461b5a9d0
+
+Postare Stackoverflow:
+    https://stackoverflow.com/questions/67416979/cost-function-with-a-set-of-rules-in-java
+
+Ways to print a List:
+    //System.out.println(Arrays.toString(studentsDB.toArray()));
+    //System.out.println(studentsDB);
+    //studentsDB.stream().forEach(System.out::println);
+
+Ways to print a Map:
+    https://stackoverflow.com/questions/5920135/printing-hashmap-in-java
+    //performanceStatiticsOfSortAlgorithms.forEach((key, value) -> System.out.println(key + " : " + value));
+    //System.out.println(performanceStatiticsOfSortAlgorithms);
+
+Map:
+    https://www.geeksforgeeks.org/hashmap-get-method-in-java/
+    https://stackoverflow.com/questions/81346/most-efficient-way-to-increment-a-map-value-in-java
+    https://www.baeldung.com/java-hashmap-sort
+    https://stackoverflow.com/questions/5920135/printing-hashmap-in-java
+    https://www.geeksforgeeks.org/map-interface-java-examples/
+
+Sort HaspMap -> TreeMap:
+    https://www.baeldung.com/java-hashmap-sort
+    //TreeMap<String, Integer> sortedStatistics = new TreeMap<>(performanceStatiticsOfSortAlgorithms);
+
+Pairs:
+    https://www.baeldung.com/java-pairs
+
+Random:
+    https://stackoverflow.com/questions/5271598/java-generate-random-number-between-two-given-values
+    https://www.geeksforgeeks.org/generate-random-string-of-given-size-in-java/
