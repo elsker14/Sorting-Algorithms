@@ -1,0 +1,12 @@
+drop table if exists `studenti`;
+
+CREATE TABLE `studenti` (
+  `IdStudent` int NOT NULL AUTO_INCREMENT,
+  `Nume` varchar(45) DEFAULT NULL,
+  `Prenume` varchar(45) DEFAULT NULL,
+  `Grupa` varchar(45) DEFAULT NULL,
+  `Serie` varchar(45) DEFAULT NULL,
+  `An` int DEFAULT NULL,
+  `Medie` float DEFAULT NULL,
+  PRIMARY KEY (`IdStudent`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

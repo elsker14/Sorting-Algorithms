@@ -1,0 +1,7 @@
+db name: licentaDB@localhost
+Host: localhost
+Port: 3306
+User: root
+pass: Pernecupene14*
+Database: licenta2k21
+URL: jdbc:postgresql://localhost:5432/licenta2k21
